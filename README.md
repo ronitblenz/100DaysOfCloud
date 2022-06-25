@@ -14,16 +14,16 @@
 Fill in your details where you see this icon ✍️
 We have provided a sample Day Journey entry staring at 0. You can delete this example.
 
-## [✍️ Your Name]'s Cloud Journey
+## Ronit's Cloud Journey
 
-[✍️ Introduce yourself]
+Ronit is an Open source contributor, Part-time Freelancer and an aspiring DevOps Engineer and is learning tools like Kubernetes, Docker, Jenkins, Prometheus, Ansible and Terraform.
 
-[✍️ Tell us why you started this challenge]
+He wants to get some real world experience using the tools and AWS through this challenge.
 
-[✍️ Tell us where you want to be at the end of the challenge]
+He wants to master the cloud technologies in which he founds his passion.
 
-- [✍️ Link to your Twitter](https://twitter.com/username)
-- [✍️ Link to your LinkedIn](https://www.linkedin.com/in/username)
+- [✍️ Twitter Profile](https://twitter.com/ronitblenz)
+- [✍️ LinkedIn Profile](https://www.linkedin.com/in/ronitbanerjee)
 
 ## Stepping out the door
 
