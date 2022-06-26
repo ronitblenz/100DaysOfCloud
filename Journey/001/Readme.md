@@ -1,52 +1,64 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
 
-# New post title here
+![placeholder image](https://camo.githubusercontent.com/3e4803b1e1707d4eb08aafb50318f23658ea195438834b840a2f393a9b9edba4/68747470733a2f2f6b61736d2d7374617469632d636f6e74656e742e73332e616d617a6f6e6177732e636f6d2f6c6f676f5f6b61736d2e706e67)
+
+# Kasm Workspaces Streams Dockerized Apps in the Browser
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
-
-## Prerequisite
-
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+Tried to run docker-apps through kasm workspace, using Linode Cloud.
+Any other cloud service provider with VM support can also be used. (AWS, Azure, GCP, IBM Cloud, DigitalOcean)
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+- Provides Separate space to work in
+- Privacy
+- Multi-user support
+- Remote access through IP
+- SSH access from desktop terminal
 
 ## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+- I spun Ubuntu 20.4 LTS over Linode (4 Gigs RAM, Shared 2 core CPU Configuration)
+- Terminal access through ssh root@[linode-ip-address]
+- Swap Configuration using the following commands
 
-## Try yourself
+```
+sudo dd if=/dev/zero bs=1M count=1024 of=/mnt/1GiB.swap
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+sudo chmod 600 /mnt/1GiB.swap
 
-### Step 1 — Summary of Step
+sudo mkswap /mnt/1GiB.swap
 
-![Screenshot](https://via.placeholder.com/500x300)
+sudo swapon /mnt/1GiB.swap
 
-### Step 1 — Summary of Step
+```
 
-![Screenshot](https://via.placeholder.com/500x300)
+- Checks if the swap is done correctly
+```
+cat /proc/swaps
 
-### Step 3 — Summary of Step
+```
+- Checks if the swap exists after Reboot of the instance
 
-![Screenshot](https://via.placeholder.com/500x300)
+```
+echo '/mnt/1GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
 
-## ☁️ Cloud Outcome
+```
+- Install KASM
+```
+wget https://kasm-static-content.s3.amazonaws.com/kasm_release_1.10.0.238225.tar.gz
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+tar -xf kasm_release*.tar.gz
 
-## Next Steps
+sudo bash kasm_release/install.sh
 
-✍️ Describe what you think you think you want to do next.
+```
+
+- After the entire process, The credentials will be displayed in the Terminal window. Copy and paste to store them in a safe place, for future use.
+- Finally, open any browser (Recommended : Safari) and type the URL as, https://[your-linode-ip]
 
 ## Social Proof
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+<img width="1133" alt="Screenshot 2022-06-26 at 9 12 16 PM" src="https://user-images.githubusercontent.com/91361382/175822273-81030d32-577e-4d3d-bbc1-02be671796ef.png">
 
-[link](link)
+
