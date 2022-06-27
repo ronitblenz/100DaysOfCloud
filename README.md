@@ -24,8 +24,8 @@ He wants to master the cloud technologies in which he founds his passion.
 
 ## Stepping out the door
 
-- [ ] ☁️ 1 > [Kasm Workspaces Streams Dockerized Apps in the Browser](Journey/001/Readme.md)
-- [ ] ☁️ 2 > [](Journey/002/Readme.md)
+- [x] ☁️ 1 > [Kasm Workspaces Streams Dockerized Apps in the Browser](Journey/001/Readme.md)
+- [x] ☁️ 2 > [Setup IAM User in AWS](Journey/002/Readme.md)
 - [ ] ☁️ 3 > [](Journey/003/Readme.md)
 - [ ] ☁️ 4 > [](Journey/004/Readme.md)
 - [ ] ☁️ 5 > [](Journey/005/Readme.md)
