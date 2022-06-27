@@ -1,52 +1,69 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+![placeholder image](https://d1.awsstatic.com/howitworks_IAM_110321.8b2290727bb2022d54416e099c87ad9dc64be5d5.jpg)
 
-# New post title here
+# Setup IAM User in AWS
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
-
-## Prerequisite
-
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+I made a IAM user through my Root account in AWS.
+In addition, I stored the credentials in aws-vault which helps to execute commands faster and user-specific.
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+- Provides Separate space to work in
+- Privacy
+- Multi-user support
+- SSH access from desktop terminal
+- Root-user control
 
 ## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+- Searched for "IAM" in AWS dashboard
+- Setup MFA (Multi Factor Authentication) for root user [Mandatory]
+ - Downloaded Google Authenticator app from playstore in my Android Device
+ - Signed in with the details provided by AWS MFA portal
+ - Clicked on Reveal Pin to get Token (refreshes every 30 second)
+ 
+ - Create User
+ - Added permissions (existing policies)
+  • With Full access and administration access
+	○ IAM
+	○ IAM User
+  ○ IAM UserChangePassword
+ 	○ API Gateway
+ 	○ Lambda
+	○ CloudFormation
 
-## Try yourself
+- Displays the Credentials (Download the .csv file or copy and store the credentials in a safe location, This is will not be displayed again)
+- Incase you forgot to store the credentials, you need to create Access Key again and delete the previous one (Maximum limit of Access Key is 2)
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
 
-### Step 1 — Summary of Step
+<img width="1044" alt="image" src="https://user-images.githubusercontent.com/91361382/176001111-1dc61234-a4c4-4ee7-9259-8b5e607efc51.png">
 
-![Screenshot](https://via.placeholder.com/500x300)
 
-### Step 1 — Summary of Step
+- Setting Credentials using AWS-Vault :
 
-![Screenshot](https://via.placeholder.com/500x300)
+```
+aws-vault add [user-id]
+```
 
-### Step 3 — Summary of Step
+- Asks for access_key_id and secret_access_key
+- Copy and paste the credentials of the IAM user created
 
-![Screenshot](https://via.placeholder.com/500x300)
 
-## ☁️ Cloud Outcome
+- Checks if the Credentials are stored correctly (Display Details of the Profile)
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+```
+aws sts get-caller-identity
+```
 
-## Next Steps
+- You can also list the users and store more credentials with different user-id
 
-✍️ Describe what you think you think you want to do next.
+```
+aws-vault list             --> (Lists user)
+aws-vault add [user-id]    --> (Adds more user)
+```
 
 ## Social Proof
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+![Screenshot 2022-06-27 at 11 10 44 PM](https://user-images.githubusercontent.com/91361382/176003201-dddf0e40-b240-45ff-b97d-53e5a49b0c08.png)
 
-[link](link)
