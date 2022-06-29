@@ -27,7 +27,7 @@ He wants to master the cloud technologies in which he founds his passion.
 - [x] ☁️ 1 > [Kasm Workspaces Streams Dockerized Apps in the Browser](Journey/001/Readme.md)
 - [x] ☁️ 2 > [Setup IAM User in AWS](Journey/002/Readme.md)
 - [x] ☁️ 3 > [Deploy S3 using AWS SAM](Journey/003/Readme.md)
-- [ ] ☁️ 4 > [](Journey/004/Readme.md)
+- [x] ☁️ 4 > [Introduction to Infrastructure as a Code (IaaC) & Deploying HTML-CSS with AWS SDK](Journey/004/Readme.md)
 - [ ] ☁️ 5 > [](Journey/005/Readme.md)
 - [ ] ☁️ 6 > [](Journey/006/Readme.md)
 - [ ] ☁️ 7 > [](Journey/007/Readme.md)
