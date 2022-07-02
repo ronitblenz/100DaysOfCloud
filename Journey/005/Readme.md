@@ -1,52 +1,58 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+![placeholder image](https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2018/06/27/thumbnail.png)
 
-# New post title here
+# Deploying and Configuring Cloudfront from S3 Bucket
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+Customizing the Public link
 
-## Prerequisite
-
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
-
+ 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+- SSL Certificate Implementation
+- Custom Domain
+- Shortens the time and the link itself
+
 
 ## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+Here are the steps for Deploying and Configuring Cloudfront from S3 Bucket :
 
-## Try yourself
+ - Check the previous day documentations for the steps done till now regarding IAM, S3, CloudFormation
+ 
+ - Add the following Snippet to the ```template.yaml``` below the resource tag
+ (This creates a CDN in CloudFront)
+ 
+ ```
+MyDistribution:
+    Type: "AWS::CloudFront::Distribution"
+    Properties:
+      DistributionConfig:
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: allow-all
+          TargetOriginId: ronit-demo-site.s3-us-east-1.amazonaws.com
+          DefaultTTL: 0
+          MinTTL: 0
+          MaxTTL: 0
+          ForwardedValues:
+            QueryString: false
+        Origins:
+          - DomainName: ronit-demo-site.s3-us-east-1.amazonaws.com
+            Id: ronit-demo-site.s3-us-east-1.amazonaws.com
+            CustomOriginConfig:
+              OriginProtocolPolicy: match-viewer
+        Enabled: "true"
+        DefaultRootObject: index.html
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+ ```
+ - Go to your IAM User Permissions in AWS Dashboard and give the permission ```CloudFrontFullAccess```
+ (Else, it will not create a Distribution through CLI and throw an error)
 
-### Step 1 — Summary of Step
+ - Now run command ```make deploy-infra```
 
-![Screenshot](https://via.placeholder.com/500x300)
-
-### Step 1 — Summary of Step
-
-![Screenshot](https://via.placeholder.com/500x300)
-
-### Step 3 — Summary of Step
-
-![Screenshot](https://via.placeholder.com/500x300)
-
-## ☁️ Cloud Outcome
-
-✍️ (Result) Describe your personal outcome, and lessons learned.
-
-## Next Steps
-
-✍️ Describe what you think you think you want to do next.
+AND HOLA! You have successfully made a CloudFront Link for your site.
 
 ## Social Proof
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+<img width="1440" alt="Screenshot 2022-07-03 at 1 11 32 AM" src="https://user-images.githubusercontent.com/91361382/177014288-0d903aff-f363-4cca-a1ef-6b02f6ec92eb.png">
 
-[link](link)
