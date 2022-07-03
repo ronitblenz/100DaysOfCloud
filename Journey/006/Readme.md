@@ -63,7 +63,7 @@ If you see this screen mentioned below, the above steps are followed correctly
  - Go to your IAM User Permissions in AWS Dashboard and give the permission ```AWSCertificateManagerFullAccess```
  (Else, it will not make the required changes for HTTPS and throw an error)
  
- - Update the following Snippet to the ```template.yaml``` in the MyCertificate tag
+ - Add the following Snippet to the ```template.yaml``` in the MyCertificate tag and Update MyDistribution tag
  (This adds the Certificate to your Custom Domain)
  
  ```
