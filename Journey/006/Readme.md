@@ -32,7 +32,6 @@ MyRoute53Record:
           AliasTarget:
             HostedZoneId: Z2FDTNDATAQYW2  # This is CloudFront HostedZoneId (Constant)
             DNSName: !GetAtt MyDistribution.DomainName
-
  ```
  For instance, My domain provider is ".xyz"
  - Login to your "Manage Domain" page in your Domain Provider's dashboard
@@ -73,6 +72,14 @@ MyCertificate:
     Properties:
       DomainName: ronitbanerjee.xyz # TODO: Don't hardcode me
       ValidationMethod: DNS
+      
+     
+  # MyDistribution:
+    # Properties:
+      # DistributionConfig:
+        ViewerCertificate:
+            AcmCertificateArn: !Ref MyCertificate
+            SslSupportMethod: sni-only
  ```
 
  - Now run command ```make deploy-infra```
