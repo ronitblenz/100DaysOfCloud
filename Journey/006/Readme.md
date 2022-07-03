@@ -1,52 +1,87 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+![placeholder image](https://miro.medium.com/max/1838/1*778ypl8euW0poV8WpTp_lw.png)
 
-# New post title here
+# Configure AWS Route 53, CloudFront and SSL Certificate
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
-
-## Prerequisite
-
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+We will learn how to deploy a serverless site from CloudFront using Route 53 and also add SSL Certficate using ACM (Amazon Certificate Manager)
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+- HTTPS (Secured Protocol with SSL Certificate)
+- Custom Domain
+
 
 ## Cloud Research
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+Here are the steps for Configuring AWS Route 53, CloudFront and SSL Certificate :
 
-## Try yourself
+ - Check the previous day documentations for the steps done till now regarding IAM, S3, CloudFormation and CloudFront
+ 
+ - Add the following Snippet to the ```template.yaml``` below the resource tag
+ (This creates a Record in Route 53)
+ 
+ ```
+MyRoute53Record:
+    Type: "AWS::Route53::RecordSetGroup"
+    Properties:
+      HostedZoneId: Z04723851ZV06PPOSS6A2 # TODO: Don't hardcode me
+      RecordSets:
+        - Name: ronitbanerjee.xyz # TODO: Don't hardcode me
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2  # This is CloudFront HostedZoneId (Constant)
+            DNSName: !GetAtt MyDistribution.DomainName
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+ ```
+ For instance, My domain provider is ".xyz"
+ - Login to your "Manage Domain" page in your Domain Provider's dashboard
+ - Copy the Name Servers from Hosted Zones in Route53 and paste it in the Custom Name Servers of Domain Provider's dashboard as shown below
+ 
+From Route53:
+![image](https://user-images.githubusercontent.com/91361382/177051906-13497a87-66f4-4525-acbb-ffb4a1fba42a.png)
 
-### Step 1 — Summary of Step
+To Domain Management Page:
+![image](https://user-images.githubusercontent.com/91361382/177051908-d379f36c-01d6-4504-92c6-cd99f379b4fc.png)
 
-![Screenshot](https://via.placeholder.com/500x300)
+Please wait for few hours, it takes time for DNS Propagation
 
-### Step 1 — Summary of Step
+Now it will definitely throw an error, because the process is not completed yet. 
+If you see this screen mentioned below, the above steps are followed correctly
 
-![Screenshot](https://via.placeholder.com/500x300)
 
-### Step 3 — Summary of Step
+![image](https://user-images.githubusercontent.com/91361382/177052038-754cd438-05bd-4d24-99a3-3360bd3776b7.png)
 
-![Screenshot](https://via.placeholder.com/500x300)
+ - Now, ACM (Amazon Certificate Manager) will come into picture
+ - Go to ACM in AWS Dashboard
+ - Click on "Request" for a certificate and mention your domain name
+ (For Example: ```ronitbanerjee.xyz``` in my case)
+ - Now verify via DNS Method
+    1. An option to create CNAME automatically will be present
+    2. Click on that and wait for 5 minutes
+    3. This will complete the verification process for the SSL Certificate
+    
+ - Go to your IAM User Permissions in AWS Dashboard and give the permission ```AWSCertificateManagerFullAccess```
+ (Else, it will not make the required changes for HTTPS and throw an error)
+ 
+ - Update the following Snippet to the ```template.yaml``` in the MyCertificate tag
+ (This adds the Certificate to your Custom Domain)
+ 
+ ```
+MyCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: ronitbanerjee.xyz # TODO: Don't hardcode me
+      ValidationMethod: DNS
+ ```
 
-## ☁️ Cloud Outcome
+ - Now run command ```make deploy-infra```
+ - Lastly, add "Alternate Domain" as ```ronitbanerjee.xyz``` in the CloudFront CDN.
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
-
-## Next Steps
-
-✍️ Describe what you think you think you want to do next.
+AND HOLA! Custom Domain Site is Deployed with HTTPS Protocol
 
 ## Social Proof
 
-✍️ Show that you shared your process on Twitter or LinkedIn
 
-[link](link)
+![image](https://user-images.githubusercontent.com/91361382/177052392-30456b3b-66be-4f2f-bf3b-740d5027313f.png)
+
