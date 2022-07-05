@@ -31,7 +31,7 @@ He wants to master the cloud technologies in which he founds his passion.
 - [x] ☁️ 5 > [Deploying and Configuring Cloudfront from S3](Journey/005/Readme.md)
 - [x] ☁️ 6 > [Configure AWS Route 53, CloudFront and SSL Certificate](Journey/006/Readme.md)
 - [x] ☁️ 7 > [Disable CORS using API Gateway and AWS Lambda for Calling API using JavaScript](Journey/007/Readme.md)
-- [ ] ☁️ 8 > [](Journey/008/Readme.md)
+- [x] ☁️ 8 > [Setup DynamoDB using AWS SAM](Journey/008/Readme.md)
 - [ ] ☁️ 9 > [](Journey/009/Readme.md)
 - [ ] ☁️ 10 > [](Journey/010/Readme.md)
 
