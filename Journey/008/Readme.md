@@ -119,5 +119,5 @@ AND The DynamoDB is ready to store data over it and turn it Dynamic !
 
 ![image](https://user-images.githubusercontent.com/91361382/177387684-779fd66f-5c1e-4558-865b-f7c0bf59899d.png)
 
-**Representation of the Stages in the Table of DynamoDB after Deployment**
+**Representation of the Stages in the API GateWay after Deployment**
 
