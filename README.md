@@ -33,7 +33,7 @@ He wants to master the cloud technologies in which he founds his passion.
 - [x] ☁️ 7 > [Disable CORS using API Gateway and AWS Lambda for Calling API using JavaScript](Journey/007/Readme.md)
 - [x] ☁️ 8 > [Setup DynamoDB using AWS SAM](Journey/008/Readme.md)
 - [x] ☁️ 9 > [Store and Get Data from DynamoDB](Journey/009/Readme.md)
-- [ ] ☁️ 10 > [](Journey/010/Readme.md)
+- [x] ☁️ 10 > [Unit Testing and CI/CD using GitHub Actions](Journey/010/Readme.md)
 
 ## Walking down the road
 
