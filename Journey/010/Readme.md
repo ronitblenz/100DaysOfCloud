@@ -81,6 +81,8 @@ jobs:
 
 **Re-run the jobs from GitHub Actions**
 
+<img width="1435" alt="Screenshot 2022-07-07 at 2 18 36 PM" src="https://user-images.githubusercontent.com/91361382/177732535-c1cf996f-5b16-4aa4-a74a-1ec8c225f00f.png">
+
 This time it will be successfully executed !
 
 So, Finally the Cloud Resume Challenge comes to an end from ```Day-2``` --> ```Day-10```
