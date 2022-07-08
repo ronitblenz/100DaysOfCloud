@@ -37,7 +37,7 @@ He wants to master the cloud technologies in which he founds his passion.
 
 ## Walking down the road
 
-- [ ] ☁️ 11 > [](Journey/011/Readme.md)
+- [x] ☁️ 11 > [Managing Ubuntu EC2 Developer Environment using Terraform](Journey/011/Readme.md)
 - [ ] ☁️ 12 > [](Journey/012/Readme.md)
 - [ ] ☁️ 13 > [](Journey/013/Readme.md)
 - [ ] ☁️ 14 > [](Journey/014/Readme.md)
