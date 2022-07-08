@@ -4,7 +4,7 @@
 
 ## Introduction
 
-I made a IAM user through my Root account in AWS.
+I made an IAM user through my Root account in AWS.
 In addition, I stored the credentials in aws-vault which helps to execute commands faster and user-specific.
 Then, I installed Docker and Terraform in my local system
 Finally, deployed an EC2 using Terraform
