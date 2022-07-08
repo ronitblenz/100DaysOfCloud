@@ -138,7 +138,7 @@ output "instance_public_dns" {
  ```
  - Turn on the Docker Daemon in Background (Else, the following commands will not be executed)
  
- - Initiate the Terraform Build
+  - Initiate the Terraform Build
  ```
  docker-compose run --rm tf init
  ```
