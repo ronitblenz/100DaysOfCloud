@@ -163,6 +163,8 @@ output "instance_public_dns" {
 
 ## Social Proof
 
+Here is the [GitHub Repository Link](https://github.com/ronitblenz/aws-ec2-terraform)
+
 <img width="1057" alt="image" src="https://user-images.githubusercontent.com/91361382/178044112-bfef91ea-fec2-4ad9-97ef-ce26988e65c4.png">
 
 **Up and running Ubuntu Environment over AWS EC2 using Terraform**
