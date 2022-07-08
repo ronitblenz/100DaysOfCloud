@@ -152,7 +152,7 @@ output "instance_public_dns" {
  ```
  docker-compose run --rm tf apply
  ```
- - Type "yes" id asks for confirmation
+ - Type "yes" if asks for confirmation
  
  And, you have successfully created an EC2 Ubuntu instance over AWS using Terraform
  This can be used as a Testing Environment by Developers or Cloud Engineers.
