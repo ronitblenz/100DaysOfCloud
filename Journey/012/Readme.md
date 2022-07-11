@@ -6,9 +6,9 @@ This is an _all-in-one_ guide and walkthrough about DevOps, the responsibility, 
 
 ## What is DevOps?
 
-Mostly, people define DevOps like something really alien to us.
+Mostly, people define DevOps as something really alien to us.
 
-But DevOps is nothing but just a way of working between Development and Operations Team to make the process of software release and maintainance easier and efficient. 
+But DevOps is nothing but just a way of working between the Development and Operations Team to make the process of software release and maintenance easier and more efficient. 
 
 
 ![image](https://user-images.githubusercontent.com/91361382/178313704-98898ca0-b16a-4ab4-8b89-60ae927d02a0.png)
@@ -16,7 +16,7 @@ But DevOps is nothing but just a way of working between Development and Operatio
 
 **This is what DevOps means to everyone, no rocket science!**
 
- - And here comes the Defination, if you want to note down :
+ - And here comes the Definition, if you want to note down :
 
   DevOps is the combination of cultural philosophies, practices, and tools that increases an organization’s ability to deliver applications and services at high velocity: evolving and improving products at a faster pace than organizations using traditional software development and infrastructure management processes. This speed enables organizations to better serve their customers and compete more effectively in the market.
 
