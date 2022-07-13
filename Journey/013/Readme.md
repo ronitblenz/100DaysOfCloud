@@ -8,7 +8,7 @@ I have made a study about fundamentals of OS and how VM works.
 
 ## Use Case
 
-- User & Harfware Interface
+- User & Hardware Interface
 
 ## Virtual Machines
 
