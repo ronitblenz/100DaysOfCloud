@@ -1,52 +1,60 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+![placeholder image](https://prod-discovery.edx-cdn.org/media/course/image/9efb5a34-0460-4fb3-b08d-9b0f7392765c-05e3ede66f26.png)
 
-# New post title here
+# Fundamentals of Operating Systems (Linux) and Virtual Machines
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
-
-## Prerequisite
-
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+I have made a study about fundamentals of OS and how VM works.
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+- User & Harfware Interface
 
-## Cloud Research
+## Virtual Machines
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+ - **Virtual Machines are simply isolated systems based on host machine to boot another Operating system.**
 
-## Try yourself
+<img width="1311" alt="Screenshot 2022-07-12 at 8 01 05 PM" src="https://user-images.githubusercontent.com/91361382/178811257-6fd43c07-9396-4adf-9931-4524fefbdb5d.png">
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+ - A hypervisor allows one host computer to support multiple guest VMs by virtually sharing its resources, such as memory and processing.
+ - There are mainly two types of Hypervisor
+   - TYPE 1
+   - TYPE 2
+ - The main difference between ```Type 1``` vs. ```Type 2``` hypervisors is that ```Type 1``` runs on bare metal and ```Type 2``` runs on top of an operating system. Each hypervisor type also has its own pros and cons and specific use cases.
+ - ```Type 1``` is adopted by most of the companies but for personal usage, we use ```Type 2```.
+ 
+<img width="1313" alt="Screenshot 2022-07-12 at 8 02 46 PM" src="https://user-images.githubusercontent.com/91361382/178812375-696fc773-5cb4-4ecf-91ac-9750c7123c6d.png">
 
-### Step 1 — Summary of Step
+- Now, we are having ```Containers``` as a light weight alternative which is now been used in cloud and DevOps in a huge scale.
 
-![Screenshot](https://via.placeholder.com/500x300)
+## Linux Fundamentals
 
-### Step 1 — Summary of Step
+ - First of all, let's make it clear that Linux is not an Operating System. Rather it is a Kernel. 
+ - Ubuntu, CentOS, Alpine, Kali, ParrotOS are few examples of Linux Distributions which are actual OS based on that Kernel.
+ - When we boot up a Linux system, we find these existing folders. Here are the significance of those :
+ 
+  1. /home --> Root user's home directory
+  2. /bin --> Executables for most essential user commands
+  3. /sbin --> System Relevant Executables (Requires Super User access)
+  4. /lib --> Essential shared library that are used by executables from /bin and /sbin
+  5. /usr --> User home directory (Obsolete)
+  6. /usr/local --> Third party apps like Docker, Java, Minikube are installed here
+  7. /opt --> Third party apps are installed which do not split data with different directories for example IDEs
+  8. /boot --> System booting files
+  9. /etc --> Configuration of System-wide applications are stored
+  10. /dev --> Location of Device files like Keyboard, Mouse, Hardrive, etc.
+  11. /var --> Contains files to which system writes data during the course of it's operation.
+  12. /tmp --> Temporary resources required for the same processes
+  13. /media --> Mounts removable media
+  14. /mnt --> Mounts temporary file systems (Obsolete)
+ 
+ - Files starting with dot (.) are hidden. They are also termed as dotfiles. You can view those by ticking the check box of the folder settings. Else you can try to run "ls -a" in terminal to show all files and folder including the hiddens ones.
 
-![Screenshot](https://via.placeholder.com/500x300)
+ - Here are the list of Linux Terminal commands prepared by myself :
 
-### Step 3 — Summary of Step
+[Handwritten Cheatsheet.pdf](https://github.com/ronitblenz/100DaysOfCloud/files/9105455/Handwritten.Cheatsheet.pdf)
 
-![Screenshot](https://via.placeholder.com/500x300)
+Thanks for reading till the very end.
 
-## ☁️ Cloud Outcome
+Follow me on [Twitter](https://twitter.com/ronitblenz), [LinkedIn](https://www.linkedin.com/in/ronitbanerjee/) and [GitHub](https://github.com/ronitblenz) for more amazing blogs about Cloud, DevOps and More !
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
-
-## Next Steps
-
-✍️ Describe what you think you think you want to do next.
-
-## Social Proof
-
-✍️ Show that you shared your process on Twitter or LinkedIn
-
-[link](link)
