@@ -47,6 +47,9 @@ I have made a study about fundamentals of OS and how VM works.
   12. /tmp --> Temporary resources required for the same processes
   13. /media --> Mounts removable media
   14. /mnt --> Mounts temporary file systems (Obsolete)
+
+<img width="1282" alt="Screenshot 2022-07-13 at 9 31 24 PM" src="https://user-images.githubusercontent.com/91361382/178819152-29f99a35-bcd8-4e39-889b-18820d1aa6f2.png">
+
  
  - Files starting with dot (.) are hidden. They are also termed as dotfiles. You can view those by ticking the check box of the folder settings. Else you can try to run "ls -a" in terminal to show all files and folder including the hiddens ones.
 
