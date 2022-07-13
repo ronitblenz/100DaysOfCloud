@@ -50,9 +50,7 @@ I have made a study about fundamentals of OS and how VM works.
  
  - Files starting with dot (.) are hidden. They are also termed as dotfiles. You can view those by ticking the check box of the folder settings. Else you can try to run "ls -a" in terminal to show all files and folder including the hiddens ones.
 
- - Here are the list of Linux Terminal commands prepared by myself :
-
-[Handwritten Cheatsheet.pdf](https://github.com/ronitblenz/100DaysOfCloud/files/9105455/Handwritten.Cheatsheet.pdf)
+ - Here is the list of Linux Terminal Commands prepared by myself : [Handwritten Cheatsheet.pdf](https://github.com/ronitblenz/100DaysOfCloud/files/9105455/Handwritten.Cheatsheet.pdf)
 
 Thanks for reading till the very end.
 
