@@ -40,7 +40,7 @@ He wants to master the cloud technologies in which he founds his passion.
 - [x] ☁️ 11 > [Managing Ubuntu EC2 Developer Environment using Terraform](Journey/011/Readme.md)
 - [x] ☁️ 12 > [Introduction to DevOps](Journey/012/Readme.md)
 - [x] ☁️ 13 > [Fundamentals of Operating Systems (Linux) and Virtual Machines](Journey/013/Readme.md)
-- [x] ☁️ 14 > [Computer Networking](Journey/014/Readme.md)
+- [x] ☁️ 14 > [Computer Networking Basics](Journey/014/Readme.md)
 - [ ] ☁️ 15 > [](Journey/015/Readme.md)
 - [ ] ☁️ 16 > [](Journey/016/Readme.md)
 - [ ] ☁️ 17 > [](Journey/017/Readme.md)
