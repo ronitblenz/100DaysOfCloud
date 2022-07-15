@@ -128,8 +128,8 @@ Firewalls have been a first line of defense in network security for over 25 year
 
 Data Link Layer is divided into two sublayers:  
 
- - Logical Link Control (LLC)
- - Media Access Control (MAC)
+  - Logical Link Control (LLC)
+  - Media Access Control (MAC)
  
 - The **Physical Layer** is responsible for the actual physical connection between the devices. The physical layer contains information in the form of bits. It is responsible for transmitting individual bits from one node to the next. When receiving data, this layer will get the signal received and convert it into 0s and 1s and send them to the Data Link layer, which will put the frame back together.  
 
