@@ -59,7 +59,7 @@ Internet Protocol version 4 (IPv4) defines an IP address as a 32-bit number. How
 
 ![image](https://user-images.githubusercontent.com/91361382/179279085-79b5f48d-7512-4f34-9bdc-fb1d87fc14b1.png)
 
-## A Sample Network System
+## Sample Network System
 
 ![image](https://user-images.githubusercontent.com/91361382/179279430-e71dedfa-bb76-46f1-8704-8be2c3fef01c.png)
 
@@ -101,7 +101,7 @@ Firewalls have been a first line of defense in network security for over 25 year
 
  - The Domains and Root DNS Servers are maintained by ```ICANN``` (Internet Corporation for Assigned Names and Numbers)
 
-## Basic Network Commands
+## Basic Networking Commands
 
 
  - ```ifconfig``` --> configure the kernel-resident network interfaces
