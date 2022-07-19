@@ -69,8 +69,45 @@ Git is software for tracking changes in any set of files, usually used for coord
  - ```git merge [branch]``` <br>
 (merge the specified branch’s history into the current one)
 
- - ```git log```
+ - ```git log``` <br>
 (show all commits in the current branch’s history)
 
+ ### Share and Update
  
- 
+ - ```git remote add [alias] [url]``` <br>
+(add a git URL as an alias)
+
+ - ```git fetch [alias]``` <br>
+(fetch down all the branches from that Git remote)
+
+ - ```git merge [alias]/[branch]``` <br>
+(merge a remote branch into your current branch to bring it up to date)
+
+ - ```git push [alias] [branch]``` <br>
+(Transmit local branch commits to the remote repository branch)
+
+ - ```git pull``` <br>
+(fetch and merge any commits from the tracking remote branch)
+
+ - ```git rm [file]``` <br>
+(delete the file from project and stage the removal for commit)
+
+### Rebase and Stash
+
+ - ```git rebase [branch]``` <br>
+(apply any commits of current branch ahead of specified one)
+
+ - ```git reset --hard [commit]``` <br>
+(clear staging area, rewrite working tree from specified commit)
+
+ - ```git stash``` <br>
+(Save modified and staged changes)
+
+ - ```git stash list``` <br>
+(list stack-order of stashed file changes)
+
+ - ```git stash pop``` <br>
+(write working from top of stash stack)
+
+ - ```git stash drop``` <br>
+(discard the changes from top of stash stack)
