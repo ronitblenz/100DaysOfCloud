@@ -55,7 +55,7 @@ Git is software for tracking changes in any set of files, usually used for coord
  - ```git commit -m “[descriptive message]”``` <br>
 (commit your staged content as a new commit snapshot)
 
-### Branch and Merge
+### Branch & Merge
 
  - ```git branch``` <br>
 (list your branches. a * will appear next to the currently active branch)
@@ -72,7 +72,7 @@ Git is software for tracking changes in any set of files, usually used for coord
  - ```git log``` <br>
 (show all commits in the current branch’s history)
 
- ### Share and Update
+ ### Share & Update
  
  - ```git remote add [alias] [url]``` <br>
 (add a git URL as an alias)
@@ -92,7 +92,7 @@ Git is software for tracking changes in any set of files, usually used for coord
  - ```git rm [file]``` <br>
 (delete the file from project and stage the removal for commit)
 
-### Rebase and Stash
+### Rebase & Stash
 
  - ```git rebase [branch]``` <br>
 (apply any commits of current branch ahead of specified one)
@@ -112,4 +112,35 @@ Git is software for tracking changes in any set of files, usually used for coord
  - ```git stash drop``` <br>
 (discard the changes from top of stash stack)
 
-## 
+## The Purpose
+
+### Infrastructure as Code
+
+<img width="1313" alt="Screenshot 2022-07-21 at 8 23 13 PM" src="https://user-images.githubusercontent.com/91361382/180245216-817d8aba-a9ef-4081-848f-8486e9622bb9.png">
+
+Infrastructure as Code (IaC) is the managing and provisioning of infrastructure through code instead of through manual processes.
+
+With IaC, configuration files are created that contain your infrastructure specifications, which makes it easier to edit and distribute configurations. It also ensures that you provision the same environment every time. By codifying and documenting your configuration specifications, IaC aids configuration management and helps you to avoid undocumented, ad-hoc configuration changes.
+
+Version control is an important part of IaC, and your configuration files should be under source control just like any other software source code file. Deploying your infrastructure as code also means that you can divide your infrastructure into modular components that can then be combined in different ways through automation.
+
+ - Files can be tracked with their History of changes
+ - Secured and stored in one place
+ - Shareable for DevOps Team
+
+### CI/CD Pipeline
+
+<img width="1315" alt="Screenshot 2022-07-21 at 8 21 03 PM" src="https://user-images.githubusercontent.com/91361382/180246057-e6b1c784-4193-4096-8f04-d2d9f9ad4aed.png">
+
+Continuous integration is the practice of integrating all your code changes into the main branch of a shared source code repository early and often, automatically testing each change when you commit or merge them, and automatically kicking off a build. With continuous integration, errors and security issues can be identified and fixed more easily, and much earlier in the software development lifecycle.
+
+By merging changes frequently and triggering automatic testing and validation processes, you minimize the possibility of code conflict, even with multiple developers working on the same application. A secondary advantage is that you don't have to wait long for answers and can, if necessary, fix bugs and security issues while the topic is still fresh in your mind.
+
+Common code validation processes start with a static code analysis that verifies the quality of the code. Once the code passes the static tests, automated CI routines package and compile the code for further automated testing. CI processes should have a version control system that tracks changes, so you know the version of the code used.
+
+<br>
+
+_Thanks for reading till the very end._
+
+_Follow me on [Twitter](https://twitter.com/ronitblenz), [LinkedIn](https://www.linkedin.com/in/ronitbanerjee/) and [GitHub](https://github.com/ronitblenz) for more amazing blogs about Cloud, DevOps and More !_
+
