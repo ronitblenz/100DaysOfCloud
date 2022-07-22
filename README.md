@@ -17,7 +17,7 @@ Ronit is an Open source contributor, Part-time Freelancer and an aspiring DevOps
 
 He wants to get some real world experience using the tools and AWS through this challenge.
 
-He wants to master the cloud technologies in which he founds his passion.
+He wants to master the cloud and devops technologies in which he found his passion.
 
 - [✍️ Twitter Profile](https://twitter.com/ronitblenz)
 - [✍️ LinkedIn Profile](https://www.linkedin.com/in/ronitbanerjee)
