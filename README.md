@@ -42,7 +42,7 @@ He wants to master the cloud and devops technologies in which he found his passi
 - [x] ☁️ 13 > [Fundamentals of Operating Systems (Linux) and Virtual Machines](Journey/013/Readme.md)
 - [x] ☁️ 14 > [Computer Networking Basics](Journey/014/Readme.md)
 - [x] ☁️ 15 > [Git for DevOps](Journey/015/Readme.md)
-- [x] ☁️ 16 > [Database Management System](Journey/016/Readme.md)
+- [x] ☁️ 16 > [Databases](Journey/016/Readme.md)
 - [ ] ☁️ 17 > [](Journey/017/Readme.md)
 - [ ] ☁️ 18 > [](Journey/018/Readme.md)
 - [ ] ☁️ 19 > [](Journey/019/Readme.md)
